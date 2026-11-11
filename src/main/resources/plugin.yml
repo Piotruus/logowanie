@@ -1,0 +1,40 @@
+name: SerwerAuth
+version: '${project.version}'
+main: pl.serwerauth.SerwerAuth
+api-version: '1.21'
+load: POSTWORLD
+description: Logowanie, rejestracja, captcha i weryfikacja ruchu dla serwera Paper.
+authors: [SerwerAuth]
+
+commands:
+  login:
+    description: Zaloguj się na serwerze
+    usage: '/login <hasło>'
+    aliases: [l, zaloguj]
+  register:
+    description: Załóż konto
+    usage: '/register <hasło> <powtórz hasło>'
+    aliases: [reg, zarejestruj]
+  captcha:
+    description: Przepisz kod captcha
+    usage: '/captcha <kod>'
+    aliases: [kod]
+  changepassword:
+    description: Zmień hasło
+    usage: '/changepassword <stare> <nowe>'
+    aliases: [zmienhaslo]
+  unregister:
+    description: Usuń swoje konto
+    usage: '/unregister <hasło>'
+    aliases: [usunkonto]
+  premium:
+    description: Oznacz konto jako premium
+    usage: '/premium [wylacz]'
+  auth:
+    description: Administracja SerwerAuth
+    usage: '/auth <reload|info|usun>'
+
+permissions:
+  serwerauth.admin:
+    description: Dostęp do komendy /auth
+    default: op

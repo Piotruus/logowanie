@@ -1,0 +1,106 @@
+# SerwerAuth — wiadomości (format MiniMessage: https://docs.advntr.dev/minimessage/)
+# Znak \< wyświetla literalny nawias, <nick>, <czas> itp. to zmienne.
+
+prefix: '<dark_gray>[<gradient:#00c6ff:#0072ff><bold>Auth</bold></gradient><dark_gray>] <gray>'
+
+blad: '<red>Wystąpił błąd. Spróbuj ponownie za chwilę.'
+dolaczyl: '<yellow><nick> dołączył do gry'
+
+actionbar:
+  captcha: '<yellow>Przepisz kod: <white>/captcha \<kod>'
+  login: '<yellow>Zaloguj się: <white>/login \<hasło>'
+  rejestracja: '<yellow>Załóż konto: <white>/register \<hasło> \<powtórz hasło>'
+  ruch: '<green>Weryfikacja pozycji! Poruszaj się <white>(<krok>/<max>)'
+
+captcha:
+  mapa: '<yellow>Przepisz kod z <gold>mapy w swojej ręce<yellow>: <white>/captcha \<kod> <gray>(wielkość liter nie ma znaczenia)'
+  czat: '<yellow>Twój kod weryfikacyjny: <white><bold><kod></bold> <gray>→ wpisz <white>/captcha <kod>'
+  ok: '<green>Captcha zaliczona.'
+  zle: '<red>Zły kod! Wygenerowano nowy. Pozostało prób: <white><pozostalo>'
+  uzycie: '<red>Użycie: /captcha \<kod>'
+  nie-teraz: '<red>Captcha nie jest teraz wymagana.'
+
+login:
+  zaloguj: '<yellow>Witaj <white><nick><yellow>! Zaloguj się: <white>/login \<hasło>'
+  uzycie: '<red>Użycie: /login \<hasło>'
+  ok: '<green>Zalogowano pomyślnie.'
+  zle-haslo: '<red>Nieprawidłowe hasło. Pozostało prób: <white><pozostalo>'
+  zablokowano: '<red>Zbyt wiele nieudanych prób. Spróbuj za <white><czas><red>.'
+  sesja: '<green>Wznowiono sesję — zalogowano automatycznie.'
+  juz: '<red>Jesteś już zalogowany.'
+  najpierw-captcha: '<red>Najpierw rozwiąż captcha: <white>/captcha \<kod>'
+  brak-konta: '<red>Nie masz jeszcze konta. Użyj <white>/register \<hasło> \<powtórz hasło>'
+  nie-teraz: '<red>Ta komenda nie jest teraz dostępna.'
+
+register:
+  zarejestruj: '<yellow>Witaj <white><nick><yellow>! Załóż konto: <white>/register \<hasło> \<powtórz hasło>'
+  uzycie: '<red>Użycie: /register \<hasło> \<powtórz hasło>'
+  haslo-rozne: '<red>Hasła nie są takie same.'
+  limit-kont: '<red>Z Twojego adresu IP zarejestrowano już maksymalną liczbę kont.'
+  masz-konto: '<red>To konto już istnieje. Użyj <white>/login \<hasło>'
+  ok: '<green>Konto zostało utworzone. <gray>Zapamiętaj hasło — nie da się go odzyskać.'
+
+polityka:
+  naglowek: '<red>Hasło jest zbyt słabe:'
+  za-krotkie: ' <red>✗ <gray>minimum <white><min> <gray>znaków'
+  za-dlugie: ' <red>✗ <gray>maksymalnie <white><max> <gray>znaków'
+  brak-duzej: ' <red>✗ <gray>co najmniej jedna <white>wielka litera'
+  brak-malej: ' <red>✗ <gray>co najmniej jedna <white>mała litera'
+  brak-cyfry: ' <red>✗ <gray>co najmniej jedna <white>cyfra'
+  brak-znaku: ' <red>✗ <gray>co najmniej jeden <white>znak specjalny <gray>(np. ! @ # $ %)'
+  spacje: ' <red>✗ <gray>hasło nie może zawierać <white>spacji'
+  zawiera-nick: ' <red>✗ <gray>hasło nie może zawierać <white>Twojego nicku'
+  popularne: ' <red>✗ <gray>hasło jest <white>zbyt popularne'
+  powtorzenia: ' <red>✗ <gray>unikaj <white>3 takich samych znaków <gray>z rzędu'
+  sekwencja: ' <red>✗ <gray>unikaj <white>ciągów typu 1234, abcd, qwer'
+
+ruch:
+  start: '<green>Weryfikacja pozycji! Zacznij się poruszać! (<krok>/<max>)'
+  krok: '<green>✔ Ruch zaliczony <white>(<krok>/<max>)'
+  obrot: '<yellow>Rozejrzyj się — poruszaj kamerą myszką, aby dokończyć weryfikację.'
+  strefa: '<red>Nie oddalaj się od miejsca weryfikacji!'
+  ok: '<green>Weryfikacja zakończona pomyślnie. Miłej gry!'
+
+zmiana:
+  uzycie: '<red>Użycie: /changepassword \<stare hasło> \<nowe hasło>'
+  stare-zle: '<red>Stare hasło jest nieprawidłowe. Pozostało prób: <white><pozostalo>'
+  takie-samo: '<red>Nowe hasło musi się różnić od starego.'
+  ok: '<green>Hasło zostało zmienione.'
+
+usuwanie:
+  uzycie: '<red>Użycie: /unregister \<hasło>'
+  zle-haslo: '<red>Nieprawidłowe hasło. Pozostało prób: <white><pozostalo>'
+
+premium:
+  wylaczone: '<red>Funkcje premium są wyłączone na tym serwerze.'
+  sprawdzam: '<gray>Sprawdzam konto w Mojang...'
+  wlaczono: '<green>Konto oznaczone jako premium <gray>(nick potwierdzony w Mojang).'
+  wylaczono: '<green>Wyłączono tryb premium dla Twojego konta.'
+  brak-konta: '<red>Nick <white><nick> <red>nie jest kontem premium w Mojang.'
+  blad: '<red>Nie udało się połączyć z serwerami Mojang. Spróbuj później.'
+  brak-weryfikatora: '<yellow>Uwaga: serwer nie ma aktywnego weryfikatora premium — logowanie nadal wymaga hasła.'
+
+czat:
+  zablokowany: '<red>Czat jest zablokowany do czasu pełnej weryfikacji.'
+
+komenda:
+  zablokowana: '<red>Przed zalogowaniem możesz używać tylko komend logowania.'
+
+kick:
+  czas: '<red>Upłynął czas na zalogowanie.'
+  ruch-czas: '<red>Nie ukończyłeś weryfikacji ruchu w wyznaczonym czasie.'
+  captcha: '<red>Zbyt wiele błędnych kodów captcha.'
+  zablokowano: '<red>Zbyt wiele nieudanych prób.<newline><gray>Spróbuj ponownie za <white><czas><gray>.'
+  blad-bazy: '<red>Błąd bazy danych. Spróbuj ponownie za chwilę.'
+  nick: '<red>Niedozwolony nick.<newline><gray>Dozwolone: litery, cyfry i _ (3–16 znaków).'
+  polaczenia: '<red>Zbyt wiele prób połączenia.<newline><gray>Odczekaj chwilę.'
+  zly-rozmiar: '<red>Użyj nicku dokładnie takiego jak przy rejestracji:<newline><white><nick>'
+  konto-usuniete: '<yellow>Twoje konto zostało usunięte.'
+
+admin:
+  brak-uprawnien: '<red>Brak uprawnień.'
+  pomoc: '<yellow>/auth reload <gray>| <yellow>/auth info \<nick> <gray>| <yellow>/auth usun \<nick>'
+  przeladowano: '<green>Przeładowano konfigurację.'
+  brak-konta: '<red>Nie ma takiego konta.'
+  info: '<gray>Konto <white><nick> <gray>| premium: <white><premium> <gray>| rejestracja: <white><data-rej> <gray>(IP <white><ip-rej><gray>) | ostatnie logowanie: <white><data-log> <gray>(IP <white><ip-log><gray>)'
+  usunieto: '<green>Usunięto konto <white><nick><green>.'

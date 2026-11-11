@@ -1,0 +1,54 @@
+# ============================================================
+#  SerwerAuth — konfiguracja
+#  Po zmianach wpisz /auth reload
+# ============================================================
+
+haslo:
+  min-dlugosc: 10            # minimalna długość hasła
+  max-dlugosc: 64            # maksymalna długość hasła
+  iteracje-pbkdf2: 210000    # koszt haszowania (wyżej = bezpieczniej, ale wolniej)
+  maks-kont-na-ip: 3         # ile kont można założyć z jednego IP
+
+logowanie:
+  czas-na-zalogowanie: 90    # sekundy na captcha + logowanie/rejestrację, potem kick
+  maks-prob-hasla: 5         # błędne hasła do blokady (osobno dla nicku i IP)
+  blokada-sekundy: 120       # bazowy czas blokady; podwaja się przy kolejnych blokadach (maks. 1 h)
+  sesja-minuty: 0            # 0 = wyłączone; >0 = pomiń logowanie przy powrocie z tego samego IP
+
+captcha:
+  wlaczona: true
+  tryb: MAPA                 # MAPA = obrazek na mapie w ręce | CZAT = kod w czacie (słabszy)
+  dlugosc: 5                 # liczba znaków kodu
+  maks-prob: 3               # błędne kody do kicka
+
+weryfikacja-ruchu:
+  wlaczona: true
+  kroki: 5                   # ile "kroków" musi wykonać gracz
+  min-dystans: 0.9           # minimalny dystans (bloki) liczony jako jeden krok
+  min-odstep-ms: 350         # minimalny odstęp między krokami
+  maks-skok: 4.0             # większy skok w jednym ticku = teleport, nie liczy się
+  promien: 8.0               # maksymalna odległość od miejsca startu weryfikacji
+  wymagaj-obrotu: true       # gracz musi też ruszyć kamerą (odsiewa proste boty)
+  min-obrot-stopni: 20
+  czas: 30                   # sekundy na ukończenie weryfikacji ruchu
+
+polaczenia:
+  maks-na-minute-z-ip: 6     # limit prób połączenia z jednego IP na minutę
+  nick-regex: '^[A-Za-z0-9_]{3,16}$'
+
+ukryj-komunikaty-dolaczenia: true   # komunikat "dołączył" pojawi się dopiero po pełnej weryfikacji
+
+# Komendy dozwolone przed zalogowaniem
+dozwolone-komendy:
+  - login
+  - l
+  - zaloguj
+  - register
+  - reg
+  - zarejestruj
+  - captcha
+  - kod
+
+premium:
+  wlaczone: true
+  cache-minuty: 10           # jak długo pamiętać odpowiedź API Mojang
